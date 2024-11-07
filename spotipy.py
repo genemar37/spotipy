@@ -1,4 +1,4 @@
-#Se importa el módulo random para crear una playlist sugerida de forma aleatoria, módulo os y time para limpiar pantalla y contador
+# Se importa el módulo random para crear una playlist sugerida de forma aleatoria, módulo os y time para limpiar pantalla y contador
 import random
 import os
 import time
@@ -67,7 +67,7 @@ lista = [
     'nacionalidad': 'inglés canadiense',
     'wiki': 'https://es.wikipedia.org/wiki/Justin_Bieber',
 },
-{       #Se agregó la información de Ed Sheeran en el script
+{       # Se agregó la información de Ed Sheeran en el script
         'nombre': 'Ed Sheeran',
         'oyentes': 68206922,
         'popular': [
@@ -91,7 +91,7 @@ lista = [
 ]
 
 
-#Función para mostrar el menú
+# Función para mostrar el menú
 def mostrar_menu():
     print("\n🎶🎶🎶 Bienvenido/a a los perfiles de los artistas 🎶🎶🎶")
     for nombre in nombres:
@@ -103,7 +103,7 @@ def mostrar_menu():
     print("4. Salir")
 
 
-#Función para mostrar info del artista almacenada en los diccionarios de la lista "lista", se obtiene accediendo a los valores de las llaves correspondientes
+# Función para mostrar info del artista almacenada en los diccionarios de la lista "lista", se obtiene accediendo a los valores de las llaves correspondientes
 def mostrar_info(artista):
     print("\nNombre:", artista['nombre'])
     print("Oyentes:", artista['oyentes'])
@@ -115,42 +115,42 @@ def mostrar_info(artista):
     print("Wiki:", artista['wiki'])
 
 
-#Función para agregar nuevas canciones populares al artista mediante entrada del usuario, se usa función split()
+# Función para agregar nuevas canciones populares al artista mediante entrada del usuario, se usa función split()
 def agregar_nueva_popular(artista):
     canciones_a_agregar = input("Ingrese las nuevas canciones populares que desea agregar separadas por comas: ").split(',')
     if canciones_a_agregar:
-        #Se obtiene la longitud de la llave "popular"
+        # Se obtiene la longitud de la llave "popular"
         longitud_anterior = len(artista['popular'])
-        #Se añaden las nuevas canciones a la llave "popular" usando función .extend 
+        # Se añaden las nuevas canciones a la llave "popular" usando función .extend 
         artista['popular'].extend(canciones_a_agregar)
-        #Imprime solo las nuevas canciones populares porque tomamos en cuenta la longitud anterior de la llaves "popular" 
+        # Imprime solo las nuevas canciones populares porque tomamos en cuenta la longitud anterior de la llaves "popular" 
         print("\nNuevas canciones populares agregadas de", artista['nombre'] + ":", artista['popular'][longitud_anterior:])
         
 
-#Función para crear playlist de canciones sugeridas aleatorias
+# Función para crear playlist de canciones sugeridas aleatorias
 def playlist_canciones_sugeridas():
-    #Se obtiene la suma de la longitud de la llaves "popular" por cada artista en la lista "lista" y se divide
+    # Se obtiene la suma de la longitud de la llaves "popular" por cada artista en la lista "lista" y se divide
     total_populares = sum(len(artista['popular']) for artista in lista) 
     mitad_populares = total_populares // 2
      
-    #Se crea una lista vacía
+    # Se crea una lista vacía
     lista_sugerida = []
-    #El bucle se detiene cuando la lista sugerida tiene aproximadamente la mitad de las canciones populares
+    # El bucle se detiene cuando la lista sugerida tiene aproximadamente la mitad de las canciones populares
     while len(lista_sugerida) < mitad_populares:
-        #Se usa función .choice para que seleccione las canciones de forma aleatoria 
+        # Se usa función .choice para que seleccione las canciones de forma aleatoria 
         artista_aleatorio = random.choice(lista)
         cancion_aleatoria = random.choice(artista_aleatorio['popular'])
         
-        #Se evalua y agrega con función .append las canciones aleatorias
+        # Se evalua y agrega con función .append las canciones aleatorias
         if cancion_aleatoria not in lista_sugerida: 
             lista_sugerida.append(cancion_aleatoria) 
     print("\n🎶🎶🎶Playlist sugerida🎶🎶🎶")
-    #Itera sobre cada canción en "lista_sugerida", enumerándolas desde 1
+    # Itera sobre cada canción en "lista_sugerida", enumerándolas desde 1
     for indice, cancion in enumerate(lista_sugerida, start=1):
         print(f"{indice}. {cancion}")      
 
 
-#Función para agregar información sobre Ed Sheeran donde se consulta al usuario si desea agregarla
+# Función para agregar información sobre Ed Sheeran donde se consulta al usuario si desea agregarla
 def agregar_info_ed():
     eleccion_usuario_ed = input("¿Desea agregar la información de Ed Sheeran? Presione S para sí o N para no: ").upper()
     if eleccion_usuario_ed == "S":
@@ -166,13 +166,13 @@ def agregar_info_ed():
         print("Opción no válida")
 
 
-#Función para limpiar la pantalla
+# Función para limpiar la pantalla
 def limpiar_pantalla():
     time.sleep(3)
     os.system("clear")
 
 
-#Ejecución del programa
+# Ejecución del programa
 while True:
 
     mostrar_menu()
