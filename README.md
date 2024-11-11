@@ -5,4 +5,8 @@
 
 ## ¿Cómo correrlo?
 
-- python3 app.py 
+- python3 app.py
+
+## Requirements
+
+This project depends on some external libraries that are listed in the requirements.txt file. 
