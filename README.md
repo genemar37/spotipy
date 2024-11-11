@@ -7,6 +7,7 @@
 
 - python3 app.py
 
+
 ## Requirements
 
-This project depends on some external libraries that are listed in the requirements.txt file. 
+- Este proyecto usa algunas librerías externas las cuales están listadas en el archivo requirements.txt
