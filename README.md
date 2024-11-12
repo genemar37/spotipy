@@ -9,23 +9,12 @@
 
 - This project allows you to perform the following actions:
 
-1. Select an artist:
-- The user can select an artist from the available list to explore their discography.
-
-2. Create a playlist:
-- User can create custom playlists.
-
-3. Play/Pause a song:
-- User can play and pause a song.
-
-4. Like/dislike a song:
-- User can rate songs by liking or disliking them.
-
+1. Select an artist
+2. Create a playlist
+3. Play/Pause a song
+4. Like/dislike a song
 5. View user information:
-- Users can view their profile, including details such as name, email and creation date.
-
-6. See information about all songs:
-- The user has access to a complete list of available songs, along with details such as title, artist, plays and duration.
+6. See information about all songs
 
 
 ## Requirements
