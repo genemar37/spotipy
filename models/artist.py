@@ -1,6 +1,6 @@
 import os
 
-from .exceptions import ArtistNotFoundError
+from exceptions.exceptions import ArtistNotFoundError
 from .song import Song
 
 

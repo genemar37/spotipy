@@ -1,6 +1,6 @@
 import pandas as pd
 
-from models.data import data
+from data.data import data
 
 
 def view_data_from_df():

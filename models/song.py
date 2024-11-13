@@ -1,7 +1,7 @@
 import os
 import time
 
-from .exceptions import ArtistNotFoundError, SongNotFoundError
+from exceptions.exceptions import ArtistNotFoundError, SongNotFoundError
 
 
 def clear_screen():

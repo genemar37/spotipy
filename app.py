@@ -1,7 +1,7 @@
 import os
 
 from models.artist import Artist
-from models.data import data
+from data.data import data
 from models.free import Free
 from models.playlist import Playlist
 from models.premium import Premium
